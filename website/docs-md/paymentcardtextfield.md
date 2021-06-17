@@ -53,7 +53,7 @@ You can also access the `valid` and `params` info via `<instance>.valid` and `<i
 # <PaymentCardTextField /> Component Example
 
 ```js
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import { StyleSheet } from 'react-native'
 import { PaymentCardTextField } from 'tipsi-stripe'
 
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
   }
 })
 
-class FieldExample extends PureComponent {
+class FieldExample extends Component {
   handleFieldParamsChange = (valid, params) => {
     console.log(`
       Valid: ${valid}
@@ -89,16 +89,18 @@ class FieldExample extends PureComponent {
   render() {
     return (
       <PaymentCardTextField
-        ref={(ref) => (this.paymentCardInput = ref)}
+        ref={ (ref) => {
+            this.paymentCardInput = ref;
+        }}
         style={styles.field}
-        cursorColor={'blue'}
-        textErrorColor={'red'}
-        placeholderColor={'grey'}
-        numberPlaceholder={'4242'}
-        expirationPlaceholder={'MM/YY'}
-        cvcPlaceholder={'CVC'}
+        cursorColor={...}
+        textErrorColor={...}
+        placeholderColor={...}
+        numberPlaceholder={...}
+        expirationPlaceholder={...}
+        cvcPlaceholder={...}
         disabled={false}
-        onParamsChange={handleFieldParamsChange}
+        onParamsChange={this.handleFieldParamsChange}
       />
     )
   }

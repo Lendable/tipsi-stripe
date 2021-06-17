@@ -1,6 +1,6 @@
 {
   "name": "tipsi-stripe",
-  "version": "9.0.0",
+  "version": "8.0.2",
   "description": "React Native Stripe binding for iOS/Android platforms",
   "main": "src/index.js",
   "scripts": {
@@ -42,8 +42,8 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.2",
-    "docusaurus": "^1.11.1",
-    "eslint": "^4.19.1",
+    "docusaurus": "^1.14.7",
+    "eslint": "^5.0.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-config-tipsi": "2.x",
@@ -51,9 +51,12 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
-    "esm": "3.0.28",
+    "esm": "^3.2.25",
     "prettier": "1.18.x",
-    "prop-types": "15.6.1",
+    "prop-types": "^15.7.2",
     "tape": "4.9.0"
+  },
+  "dependencies": {
+    "react-native": "^0.40.0"
   }
 }

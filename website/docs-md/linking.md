@@ -6,16 +6,9 @@ sidebar_label: Linking
 
 > **Note** Linking on Windows system currently isn't working. Feel free to fix it and remove this warning from docs
 
+## Automatically
 
-## React Native >= 0.60
-
-Autolinking will just do the job.
-
-## React Native < 0.60
-
-## Automatic
-
-`react-native link tipsi-stripe`
+Run `react-native link tipsi-stripe` so your project is linked against your Xcode project and all CocoaPods dependencies are installed.
 
 ## Manual
 
@@ -41,7 +34,7 @@ In your `android/app/build.gradle` add:
 ...
 dependencies {
   ...
-+ implementation project(':tipsi-stripe')
++ compile project(':tipsi-stripe')
 }
 ```
 
@@ -61,8 +54,8 @@ In your `android/build.gradle` add:
 
 allprojects {
   repositories {
-    ...
-+   maven { url "https://jitpack.io" }
+  ...
++ maven { url "https://jitpack.io" }
   }
 }
 ```
